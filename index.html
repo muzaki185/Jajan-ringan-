@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warung Makan Bu HJ Omah</title>
+    <title>RESTO OPAH OMAH</title>
     <link rel="stylesheet" href="style.css">
 </head>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "WARUNG MAKAN",
+  "name": "RESTO OPAH OMAH",
   "image": "https://1.bp.blogspot.com/-B6lokoQw8ZI/Vt_gXX4jRxI/AAAAAAAABak/sBp-LtEyVYI/s1600/rumah%2Bmakan%2B2.jpg",
   "@id": "",
   "url": "https://muzaki185.github.io/Jajan-ringan-/",
@@ -30,7 +30,7 @@
     <header>
         <!-- Tentang Toko -->
     <div class="container section">
-        <h1>WARUNG MAKAN</h1>
+        <h1>RESTO OPAH OMAH</h1>
         <img src="https://1.bp.blogspot.com/-B6lokoQw8ZI/Vt_gXX4jRxI/AAAAAAAABak/sBp-LtEyVYI/s1600/rumah%2Bmakan%2B2.jpg" class="gambar" alt="logo">
         <div>
             <div class="rating">
@@ -116,7 +116,6 @@
                     <button class="buy-now" onclick="buyNow('NTEH', 3000)">Beli Sekarang</button>
                 </div>
         </div>
-
         <div class="container section">
             <h2>Pemasukan</h2>
             <p id="income" style="font-weight: bold;">Total Pemasukan: Rp 0</p>
@@ -128,29 +127,23 @@
     <script src="script.js"></script>
 </body>
 </html>
-
 <script>
     let cart = [];
     let total = 0;
     let income = 0;
-
     function addToCart(productName, price) {
         cart.push({ name: productName, price: price });
         total += price;
         income += price;
-
         // Update keranjang di halaman
         updateCart();
     }
-
     function buyNow(productName, price) {
         income += price;
         alert(`Anda telah membeli ${productName} seharga Rp ${price.toLocaleString()}. Terima kasih atas pembeliannya!`);
-
         // Update pemasukan
         updateIncome();
     }
-
     function updateCart() {
         const cartList = document.getElementById('cart');
         const totalElement = document.getElementById('total');
@@ -161,11 +154,9 @@
             cartList.appendChild(listItem);
         });
         totalElement.textContent = `Total: Rp ${total.toLocaleString()}`;
-
         // Update pemasukan
         updateIncome();
     }
-
     function updateIncome() {
         const incomeElement = document.getElementById('income');
         incomeElement.textContent = `Total Pemasukan: Rp ${income.toLocaleString()}`;
